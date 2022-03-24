@@ -431,7 +431,11 @@ function draw(){
             trophy.position.x = windowWidth+windowWidth
         }else{
             barrier_3.position.x = windowWidth/2
-            trophy.position.x = windowWidth/2
+            if(coin_group.length>1){
+                if(which_l_play==10){
+                    trophy.position.x = coin_group[coin_group.length-1].position.x
+                }
+            }
         }
 
         if(score>highScore){
